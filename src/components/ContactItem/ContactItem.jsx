@@ -1,14 +1,22 @@
 import PropTypes from 'prop-types';
 import { MdOutlineDeleteForever } from 'react-icons/md';
-
-import { ListItem, Contact, Button } from './ContactItem.styled';
+import { RiContactsLine } from 'react-icons/ri';
+import {
+  ListItem,
+  Contact,
+  Button,
+  ContactWrapper,
+} from './ContactItem.styled';
 
 export const ContactItem = ({ name, number, onDelete }) => {
   return (
     <ListItem>
-      <Contact>{`${name}: ${number}`}</Contact>
+      <ContactWrapper>
+        <RiContactsLine size="20px" color="grey" />
+        <Contact>{`${name}: ${number}`}</Contact>
+      </ContactWrapper>
       <Button type="button" onClick={onDelete}>
-        <MdOutlineDeleteForever size="20px" color="grey" />
+        <MdOutlineDeleteForever size="25px" color="grey" />
       </Button>
     </ListItem>
   );

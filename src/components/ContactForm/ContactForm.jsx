@@ -73,7 +73,7 @@ export class ContactForm extends Component {
           </Label>
 
           <Button type="submit">
-            <BsPersonAdd size="40px" color="grey" />
+            <BsPersonAdd size="35px" color="grey" />
           </Button>
         </Form>
       </>
