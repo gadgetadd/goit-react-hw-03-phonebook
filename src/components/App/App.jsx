@@ -28,7 +28,7 @@ export class App extends Component {
 
   formSubmitHandler = newContact => {
     const isExists = this.state.contacts.some(
-      contact => contact.name === newContact.name
+      contact => contact.name.toLowerCase() === newContact.name.toLowerCase()
     );
     if (isExists) {
       return Report.info(
